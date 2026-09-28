@@ -3,271 +3,152 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hyrule Compagnon — Guide, histoire et fun facts de Zelda</title>
-<meta name="description" content="Le guide pour finir un jeu Zelda : étapes clés, présentation de chaque jeu, chronologie, lore, fun facts et checklist de progression.">
+<title>Hyrule Compagnon — Majora's Mask et Twilight Princess</title>
+<meta name="description" content="Guides complets pour finir Majora's Mask et Twilight Princess : pas à pas, donjons, secrets, fun facts et checklist.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔺</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Marcellus&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--nuit:#0d181d;--ardoise:#152730;--brume:#1f3a45;--sheikah:#5be0e8;--or:#e8b84a;--os:#e8efe8;--doux:#9db4b8;--r:10px;
---serif:'Cinzel',Georgia,serif;--sans:'Nunito Sans',system-ui,sans-serif}
+:root{--bg:#0d181d;--card:#152730;--line:#1f3a45;--acc:#e8b84a;--acc2:#5be0e8;--os:#e8efe8;--doux:#9db4b8;--serif:'Cinzel',Georgia,serif;--sans:'Nunito Sans',system-ui,sans-serif}
+body[data-cat=mm]{--bg:#120d24;--card:#1d1638;--line:#33285e;--acc:#f2a33a;--acc2:#9be36f;--doux:#b3a9d6;--serif:'Cinzel',Georgia,serif}
+body[data-cat=tp]{--bg:#0c1114;--card:#161f24;--line:#2a3a42;--acc:#ff7a3d;--acc2:#5ee6d8;--doux:#9fb2b8;--serif:'Marcellus',Georgia,serif}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{background:var(--nuit);color:var(--os);font:400 1.05rem/1.7 var(--sans)}
-a{color:var(--sheikah)}
-:focus-visible{outline:3px solid var(--or);outline-offset:3px}
-.wrap{max-width:1040px;margin:auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:9;background:rgba(13,24,29,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--brume)}
-nav .wrap{display:flex;gap:6px;align-items:center;overflow-x:auto;padding-block:10px}
-nav b{font:900 1.05rem var(--serif);color:var(--or);margin-right:auto;white-space:nowrap}
-nav a{color:var(--os);text-decoration:none;padding:6px 12px;border-radius:99px;font-weight:600;font-size:.92rem;white-space:nowrap}
-nav a:hover,nav a.on{background:var(--brume);color:var(--sheikah)}
-.hero{text-align:center;padding:84px 0 70px;background:radial-gradient(ellipse at 50% 0,#1d4450 0,transparent 65%)}
-.tri{width:110px;height:auto;margin-bottom:18px;filter:drop-shadow(0 0 18px rgba(232,184,74,.55))}
-h1{font:900 clamp(2.2rem,6vw,4rem)/1.1 var(--serif);color:var(--or);letter-spacing:.02em}
-.hero p{max-width:620px;margin:18px auto 28px;color:var(--doux);font-size:1.15rem}
-.btn{display:inline-block;background:var(--or);color:#1a1405;font-weight:800;text-decoration:none;padding:12px 26px;border-radius:99px;margin:4px}
-.btn.alt{background:transparent;color:var(--sheikah);border:2px solid var(--sheikah)}
-.stats{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:44px;color:var(--doux);font-size:.95rem}
-.stats strong{display:block;font:700 1.8rem var(--serif);color:var(--os)}
-section{padding:64px 0;border-top:1px solid var(--brume)}
-h2{font:700 clamp(1.6rem,4vw,2.3rem) var(--serif);color:var(--or);margin-bottom:8px}
-.lead{color:var(--doux);max-width:680px;margin-bottom:32px}
-h3{font:700 1.15rem var(--serif);color:var(--sheikah);margin-bottom:6px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
-.card{background:var(--ardoise);border:1px solid var(--brume);border-radius:var(--r);padding:22px}
-.steps{counter-reset:s;display:grid;gap:14px;list-style:none;padding:0}
-.steps li{counter-increment:s;background:var(--ardoise);border-left:4px solid var(--or);border-radius:var(--r);padding:16px 20px 16px 64px;position:relative}
-.steps li::before{content:counter(s);position:absolute;left:18px;top:12px;font:900 1.7rem var(--serif);color:var(--or)}
-.steps b{color:var(--os)}
-details{background:var(--ardoise);border:1px solid var(--brume);border-radius:var(--r);margin-bottom:12px}
-summary{cursor:pointer;padding:16px 20px;font:700 1.1rem var(--serif);display:flex;justify-content:space-between;gap:12px;list-style:none}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--or);font-size:1.4rem;line-height:1}
-details[open] summary::after{content:"–"}
-summary small{font:600 .85rem var(--sans);color:var(--doux);margin-left:auto;align-self:center}
-.body{padding:0 20px 20px;display:grid;gap:12px}
-.meta{display:flex;flex-wrap:wrap;gap:8px}
-.tag{background:var(--brume);color:var(--os);border-radius:99px;padding:2px 12px;font-size:.85rem}
-.body ul{padding-left:20px}
-.tl{position:relative;border-left:3px solid var(--brume);margin-left:8px;display:grid;gap:22px;padding-left:26px}
-.tl div{position:relative}
-.tl div::before{content:"";position:absolute;left:-36px;top:7px;width:13px;height:13px;background:var(--or);border-radius:50%;border:3px solid var(--nuit)}
-.tl b{font-family:var(--serif);color:var(--or)}
-.branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:8px}
-.branches .card{border-top:4px solid var(--sheikah)}
-.branches .card:nth-child(2){border-top-color:var(--or)}
-.branches .card:nth-child(3){border-top-color:#e2705f}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.filters button{background:var(--ardoise);color:var(--os);border:1px solid var(--brume);border-radius:99px;padding:7px 16px;font:600 .9rem var(--sans);cursor:pointer}
-.filters button[aria-pressed=true]{background:var(--sheikah);color:#052226;border-color:var(--sheikah)}
-.fact.hide{display:none}
-.fact p{margin-top:6px}
-.bar{height:14px;background:var(--brume);border-radius:99px;overflow:hidden;margin:10px 0 22px}
-.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sheikah),var(--or));transition:width .4s}
-.check label{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--brume);cursor:pointer}
-.check input{width:20px;height:20px;accent-color:var(--or);margin-top:4px;flex:none}
-.check h3{margin:22px 0 4px}
-.reset{background:none;border:1px solid var(--doux);color:var(--doux);border-radius:99px;padding:6px 16px;cursor:pointer;margin-top:18px}
-.faq details p{padding:0 20px 18px}
-footer{border-top:1px solid var(--brume);padding:34px 0;color:var(--doux);font-size:.9rem;text-align:center}
-@media(max-width:560px){summary small{display:none}.hero{padding-top:56px}}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{background:var(--bg);color:var(--os);font:400 1.05rem/1.7 var(--sans)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1000px;margin:auto;padding:0 20px}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;gap:8px;align-items:center;padding-block:10px;flex-wrap:wrap}
+.brand{font:900 1.05rem var(--serif);color:var(--acc);margin-right:auto;background:none;border:0;cursor:pointer}
+.cat{border:2px solid var(--line);background:none;color:var(--os);font:700 .95rem var(--sans);padding:7px 18px;border-radius:99px;cursor:pointer}
+.cat[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#140c00}
+.sub{border-top:1px solid var(--line);display:none}
+body:not([data-cat=home]) .sub{display:block}
+.sub .wrap{display:flex;gap:4px;overflow-x:auto;padding-block:6px}
+.sub button{background:none;border:0;color:var(--os);font:600 .9rem var(--sans);padding:6px 12px;border-radius:99px;cursor:pointer;white-space:nowrap}
+.sub button:hover{background:var(--line);color:var(--acc2)}
+.panel{display:none}
+body[data-cat=home] #home,body[data-cat=mm] #mm,body[data-cat=tp] #tp{display:block}
+.hero{text-align:center;padding:76px 0 56px}
+h1{font:900 clamp(2.1rem,6vw,3.6rem)/1.1 var(--serif);color:var(--acc)}
+.hero p{max-width:600px;margin:16px auto 0;color:var(--doux);font-size:1.12rem}
+.choose{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-bottom:70px}
+.big{text-align:left;border:2px solid var(--line);border-radius:14px;padding:30px;cursor:pointer;color:var(--os);font:inherit}
+.big h2{font:900 1.9rem var(--serif);margin-bottom:8px}
+.big p{color:var(--doux)}
+.big.mm{background:linear-gradient(160deg,#2a1f55,#120d24);border-color:#f2a33a}.big.mm h2{color:#f2a33a}
+.big.tp{background:linear-gradient(160deg,#20303a,#0c1114);border-color:#ff7a3d}.big.tp h2{color:#ff7a3d}
+.big span{display:inline-block;margin-top:14px;font-weight:800}
+.big.mm span{color:#9be36f}.big.tp span{color:#5ee6d8}
+section.s{padding:52px 0;border-top:1px solid var(--line)}
+.cathead{padding:56px 0 34px}
+h2.t{font:700 clamp(1.5rem,4vw,2.1rem) var(--serif);color:var(--acc);margin-bottom:6px}
+.lead{color:var(--doux);max-width:660px;margin-bottom:26px}
+h3{font:700 1.12rem var(--serif);color:var(--acc2);margin-bottom:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card .k{color:var(--doux);font-size:.9rem}
+.steps{counter-reset:s;display:grid;gap:12px;list-style:none;padding:0}
+.steps li{counter-increment:s;background:var(--card);border-left:4px solid var(--acc);border-radius:10px;padding:14px 18px 14px 62px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:18px;top:8px;font:900 1.7rem var(--serif);color:var(--acc)}
+.steps b{display:block;color:var(--os)}
+.tbl{width:100%;border-collapse:collapse;background:var(--card);border-radius:10px;overflow:hidden;font-size:.95rem}
+.scroll{overflow-x:auto;border-radius:10px;border:1px solid var(--line)}
+.tbl th,.tbl td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{color:var(--acc);font:700 .95rem var(--serif);background:color-mix(in srgb,var(--card) 70%,var(--bg))}
+.tbl tr:last-child td{border:0}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.filters button{background:var(--card);color:var(--os);border:1px solid var(--line);border-radius:99px;padding:6px 15px;font:600 .9rem var(--sans);cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--acc2);color:#04201d;border-color:var(--acc2)}
+.hide{display:none!important}
+.bar{height:14px;background:var(--line);border-radius:99px;overflow:hidden;margin:8px 0 6px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc2),var(--acc));transition:width .4s}
+.pct{font:700 1.4rem var(--serif);color:var(--acc);margin-bottom:14px}
+.check h3{margin:20px 0 2px}
+.check label{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--acc);margin-top:4px;flex:none}
+.reset{background:none;border:1px solid var(--doux);color:var(--doux);border-radius:99px;padding:6px 16px;cursor:pointer;margin-top:16px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--doux);font-size:.9rem;text-align:center}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
 </style>
 </head>
-<body>
-<nav aria-label="Navigation principale"><div class="wrap">
-<b>Hyrule Compagnon</b>
-<a href="#demarrer">Démarrer</a><a href="#jeux">Les jeux</a><a href="#histoire">Histoire</a><a href="#lore">Lore</a><a href="#faits">Fun facts</a><a href="#suivi">Ma progression</a><a href="#faq">FAQ</a>
-</div></nav>
-
-<header class="hero"><div class="wrap">
-<svg class="tri" viewBox="0 0 100 90" role="img" aria-label="Triforce"><polygon points="50,2 74,44 26,44" fill="#e8b84a"/><polygon points="26,46 50,88 2,88" fill="#e8b84a"/><polygon points="74,46 98,88 50,88" fill="#e8b84a"/></svg>
-<h1>Hyrule Compagnon</h1>
-<p>Tout pour finir un jeu Zelda sans te perdre : méthode, présentation de chaque épisode, histoire de la saga, lore et anecdotes.</p>
-<a class="btn" href="#demarrer">Commencer l'aventure</a><a class="btn alt" href="#suivi">Suivre ma progression</a>
-<div class="stats"><div><strong>1986</strong>premier jeu</div><div><strong>20+</strong>jeux principaux et dérivés</div><div><strong>3</strong>fragments de Triforce</div></div>
-</div></header>
+<body data-cat="home">
+<header class="top"><div class="wrap">
+<button class="brand" data-go="home">Hyrule Compagnon</button>
+<button class="cat" data-go="mm" aria-pressed="false">Majora's Mask</button>
+<button class="cat" data-go="tp" aria-pressed="false">Twilight Princess</button>
+</div><div class="sub"><div class="wrap" id="sub"></div></div></header>
 
 <main>
-<section id="demarrer"><div class="wrap">
-<h2>Démarrer : la méthode pour finir n'importe quel Zelda</h2>
-<p class="lead">Les jeux changent, la structure reste la même. Six réflexes qui fonctionnent partout.</p>
-<ol class="steps">
-<li><b>Parle à tout le monde, deux fois.</b> Les PNJ donnent les indices. Si tu es bloqué, reparle-leur : le dialogue change souvent après un événement.</li>
-<li><b>Explore avant de foncer.</b> Les cœurs, bouteilles et bourses agrandies sont cachés hors du chemin principal. Ils rendent les donjons bien plus faciles.</li>
-<li><b>Lis l'environnement.</b> Fissures dans les murs, torches, blocs déplaçables : chaque salle t'apprend son propre puzzle.</li>
-<li><b>Utilise le nouvel objet partout.</b> Le donjon t'offre un outil : la solution de ses énigmes, du boss et des secrets passe presque toujours par lui.</li>
-<li><b>Soigne ton inventaire.</b> Garde des potions, des fées et des bombes avant chaque boss. Reviens en ville t'équiper plutôt que de forcer.</li>
-<li><b>Bloqué plus de 20 minutes ?</b> Change d'activité : une quête annexe, un autre donjon, ou regarde tout ce que tu n'as pas encore utilisé.</li>
-</ol>
-</div></section>
-
-<section id="jeux"><div class="wrap">
-<h2>Les jeux : présentation et conseils pour les finir</h2>
-<p class="lead">Ouvre la fiche du jeu qui t'intéresse. Durées indicatives pour l'histoire principale.</p>
-
-<details open><summary>The Legend of Zelda <small>1986 · NES / Famicom</small></summary><div class="body">
-<div class="meta"><span class="tag">≈ 6 h</span><span class="tag">2D vue du dessus</span><span class="tag">9 donjons</span></div>
-<p>Le point de départ : un monde ouvert où l'on choisit son ordre d'exploration. Aucune carte ne t'est donnée, c'est voulu.</p>
-<ul><li>Prends l'épée en bois dans la première grotte, puis explore.</li><li>Brûle les buissons et bombarde les murs suspects : beaucoup de passages sont cachés.</li><li>Dessine ta propre carte, comme à l'époque.</li></ul></div></details>
-
-<details><summary>A Link to the Past <small>1991 · Super Nintendo</small></summary><div class="body">
-<div class="meta"><span class="tag">≈ 15 h</span><span class="tag">2D</span><span class="tag">Monde clair / monde des ténèbres</span></div>
-<p>Le modèle de la saga : deux mondes parallèles, des donjons à objets et une Master Sword à aller chercher.</p>
-<ul><li>Le miroir magique te fait passer d'un monde à l'autre : repère les endroits inaccessibles pour y revenir.</li><li>Explore la carte du monde des ténèbres avant chaque donjon : des cœurs t'attendent.</li></ul></div></details>
-
-<details><summary>Ocarina of Time <small>1998 · Nintendo 64</small></summary><div class="body">
-<div class="meta"><span class="tag">≈ 25 h</span><span class="tag">3D</span><span class="tag">Voyage dans le temps</span></div>
-<p>Le premier Zelda en 3D. Link voyage entre enfance et âge adulte pour vaincre Ganondorf. Le ciblage (Z) y est né.</p>
-<ul><li>Apprends toutes les mélodies : elles servent de téléportation et de solutions d'énigmes.</li><li>Certaines zones ne s'ouvrent qu'avec l'autre âge du héros : pense à revenir.</li><li>Le Temple de l'Eau est célèbre pour sa difficulté ; règle le niveau de l'eau étage par étage.</li></ul></div></details>
-
-<details><summary>Majora's Mask <small>2000 · Nintendo 64</small></summary><div class="body">
-<div class="meta"><span class="tag">≈ 25 h</span><span class="tag">3D</span><span class="tag">Boucle de 3 jours</span></div>
-<p>Trois jours pour empêcher la lune de s'écraser. Tu rejoues la boucle en changeant ce qui doit l'être.</p>
-<ul><li>Joue la mélodie d'inversion du temps pour ralentir : rien n'est perdu de ce qui compte.</li><li>Les quêtes de PNJ se font avec un emploi du temps : note les horaires.</li><li>Les masques débloquent des zones : ne les néglige pas.</li></ul></div></details>
-
-<details><summary>The Wind Waker <small>2002 · GameCube</small></summary><div class="body">
-<div class="meta"><span class="tag">≈ 30 h</span><span class="tag">3D cel-shading</span><span class="tag">Mer et îles</span></div>
-<p>Hyrule est sous les eaux. Tu navigues de l'une à l'autre avec un bateau parlant.</p>
-<ul><li>Gagne rapidement la voile rapide et la baguette du vent.</li><li>La quête de la Triforce demande de réunir des cartes marines et de l'argent : farme les rubis en amont.</li></ul></div></details>
-
-<details><summary>Twilight Princess <small>2006 · GameCube / Wii</small></summary><div class="body">
-<div class="meta"><span class="tag">≈ 35 h</span><span class="tag">3D</span><span class="tag">Forme de loup</span></div>
-<p>Une ambiance plus sombre : Link se transforme en loup et affronte un monde envahi par le crépuscule.</p>
-<ul><li>Cherche les insectes dorés : ils débloquent des extras avec Agitha.</li><li>Le loup sent des trésors enfouis : utilise le flair.</li></ul></div></details>
-
-<details><summary>Skyward Sword <small>2011 · Wii</small></summary><div class="body">
-<div class="meta"><span class="tag">≈ 35 h</span><span class="tag">3D</span><span class="tag">Commandes gestuelles</span></div>
-<p>L'origine de la saga : la création de la Master Sword et le début du cycle Link–Zelda–Ganon.</p>
-<ul><li>Frappe dans la direction indiquée par l'ennemi : la garde de chaque adversaire te donne le sens.</li><li>Améliore ton équipement chez le forgeron des nuages pour survivre plus longtemps.</li></ul></div></details>
-
-<details><summary>Breath of the Wild <small>2017 · Switch / Wii U</small></summary><div class="body">
-<div class="meta"><span class="tag">≈ 50 h</span><span class="tag">Monde ouvert</span><span class="tag">120 sanctuaires</span></div>
-<p>Cent ans après la Calamité. Tu peux affronter Ganon dès la fin de l'introduction ; le jeu te laisse libre.</p>
-<ul><li>Récupère les cœurs et de l'endurance dans les sanctuaires avant les Créatures divines.</li><li>Prends la Master Sword : elle demande 13 cœurs et elle change tout.</li><li>Fais cuire de la nourriture : c'est le meilleur soin du jeu.</li><li>Ne combats pas tout : le pouvoir de la Sheikah Slate permet de contourner beaucoup d'ennemis.</li></ul></div></details>
-
-<details><summary>Tears of the Kingdom <small>2023 · Switch</small></summary><div class="body">
-<div class="meta"><span class="tag">≈ 60 h</span><span class="tag">Monde ouvert</span><span class="tag">Ciel · Surface · Profondeurs</span></div>
-<p>Suite de Breath of the Wild : îles célestes, sous-sol obscur et pouvoirs de fabrication (Amalgame, Emprise, Rétro-Temps…).</p>
-<ul><li>Finis d'abord les îles du ciel : elles t'apprennent tous les pouvoirs.</li><li>Les Profondeurs sont dangereuses : monte les lumières Racines pour t'éclairer.</li><li>Construis plutôt que de combattre : véhicules, armes, tout est possible.</li></ul></div></details>
-
-<details><summary>Echoes of Wisdom <small>2024 · Switch</small></summary><div class="body">
-<div class="meta"><span class="tag">≈ 20 h</span><span class="tag">Zelda jouable</span><span class="tag">Vue du dessus</span></div>
-<p>Pour la première fois, c'est Zelda l'héroïne. Elle copie des objets et des monstres, les « échos », pour résoudre les énigmes.</p>
-<ul><li>Essaie plusieurs échos par obstacle : la solution la plus simple est rarement celle du jeu.</li><li>Explore les failles : elles cachent des cœurs et des ressources.</li></ul></div></details>
-</div></section>
-
-<section id="histoire"><div class="wrap">
-<h2>Histoire de la saga</h2>
-<p class="lead">De la petite aventure de Miyamoto à des mondes ouverts titanesques.</p>
-<div class="tl">
-<div><b>1986</b> — Shigeru Miyamoto et Takashi Tezuka lancent <em>The Legend of Zelda</em> au Japon sur Famicom Disk System. L'idée vient des explorations d'enfance de Miyamoto dans la campagne autour de chez lui.</div>
-<div><b>1991</b> — <em>A Link to the Past</em> installe la formule : donjons, objets clés, Master Sword.</div>
-<div><b>1993</b> — <em>Link's Awakening</em> arrive sur Game Boy : premier Zelda portable, hors de Hyrule.</div>
-<div><b>1998</b> — <em>Ocarina of Time</em> passe en 3D et devient une référence du jeu vidéo.</div>
-<div><b>2002</b> — <em>The Wind Waker</em> divise pour son style cel-shading, avant d'être largement réhabilité.</div>
-<div><b>2011</b> — <em>Hyrule Historia</em> publie la chronologie officielle de la saga.</div>
-<div><b>2017</b> — <em>Breath of the Wild</em> réinvente la série en monde ouvert.</div>
-<div><b>2023</b> — <em>Tears of the Kingdom</em> prolonge cette formule en ajoutant construction et verticalité.</div>
-<div><b>2024</b> — <em>Echoes of Wisdom</em> met pour la première fois Zelda au premier plan.</div>
-</div>
-</div></section>
-
-<section id="lore"><div class="wrap">
-<h2>Lore : la Triforce, les héros et la chronologie</h2>
-<p class="lead">Une même légende rejouée d'âge en âge, avec ses variations.</p>
-<div class="grid">
-<article class="card"><h3>La Triforce</h3><p>Relique créée par les déesses. Elle a trois fragments : <b>Force</b> (Ganondorf), <b>Sagesse</b> (Zelda) et <b>Courage</b> (Link). Celui qui réunit les trois voit son vœu exaucé.</p></article>
-<article class="card"><h3>Link</h3><p>Le héros silencieux. Il change d'époque en époque : c'est un esprit de courage réincarné, pas un seul et même personnage.</p></article>
-<article class="card"><h3>Zelda</h3><p>Princesse, sage, parfois érudite ou guerrière. Le nom de la série est aussi le sien : c'est elle qui donne son titre à la saga.</p></article>
-<article class="card"><h3>Ganon / Ganondorf</h3><p>Le roi des Gerudo, puis démon incarnant la haine. Il revient à chaque cycle sous une forme différente.</p></article>
-</div>
-<h3 style="margin-top:34px">La chronologie officielle en trois branches</h3>
-<p class="lead">Selon <em>Hyrule Historia</em>, l'histoire se sépare après <em>Ocarina of Time</em>.</p>
-<div class="branches">
-<div class="card"><h3>Enfant vainqueur</h3><p>Link retourne enfant dans le passé, prévient Zelda et évite le pire. Suivent <em>Majora's Mask</em>, <em>Twilight Princess</em> et d'autres.</p></div>
-<div class="card"><h3>Adulte vainqueur</h3><p>Link, resté adulte, a scellé Ganondorf mais est renvoyé enfant. Cette branche mène à <em>The Wind Waker</em>.</p></div>
-<div class="card"><h3>Héros vaincu</h3><p>Dans cette branche, Link perd son combat. Elle mène à <em>A Link to the Past</em> et à tout ce qui suit.</p></div>
-</div>
-</div></section>
-
-<section id="faits"><div class="wrap">
-<h2>Fun facts</h2>
-<p class="lead">Filtre par thème et découvre ce que les fans savent (presque) tous.</p>
-<div class="filters" role="group" aria-label="Filtrer les anecdotes">
-<button aria-pressed="true" data-f="all">Tous</button><button aria-pressed="false" data-f="saga">La saga</button><button aria-pressed="false" data-f="jeu">Gameplay</button><button aria-pressed="false" data-f="monde">Monde et lore</button>
-</div>
-<div class="grid">
-<article class="card fact" data-t="saga"><h3>Un nom emprunté</h3><p>Zelda tient son nom de Zelda Fitzgerald, épouse de l'écrivain F. Scott Fitzgerald. Miyamoto aimait sa sonorité.</p></article>
-<article class="card fact" data-t="saga"><h3>Link n'est pas Zelda</h3><p>Erreur classique : Zelda est la princesse. Le héros, c'est Link. Il n'a jamais la parole dans les jeux.</p></article>
-<article class="card fact" data-t="saga"><h3>La première phrase culte</h3><p>« C'est dangereux d'y aller seul ! Prends ça. » : la réplique du vieil homme de la grotte est l'une des plus connues du jeu vidéo.</p></article>
-<article class="card fact" data-t="jeu"><h3>Le deuxième quête</h3><p>Dans le premier jeu, terminer l'aventure ouvre une version remaniée du monde. Il suffit aussi de nommer sa partie ZELDA pour y accéder.</p></article>
-<article class="card fact" data-t="jeu"><h3>Le ciblage est né avec Ocarina</h3><p>Le système de verrouillage sur un ennemi (Z-targeting) est devenu un standard des jeux d'action 3D.</p></article>
-<article class="card fact" data-t="jeu"><h3>Twilight Princess inversé</h3><p>Sur Wii, le monde est en miroir pour que Link soit droitier, comme la plupart des joueurs. Sur GameCube, il est gaucher.</p></article>
-<article class="card fact" data-t="jeu"><h3>900 puis 1 000 Korogus</h3><p>Breath of the Wild cache 900 graines Korogu. Tears of the Kingdom en cache 1 000.</p></article>
-<article class="card fact" data-t="jeu"><h3>Le boss final en début de partie</h3><p>Dans Breath of the Wild, on peut aller défier Ganon dès la sortie du plateau d'introduction, avec peu d'équipement et beaucoup d'audace.</p></article>
-<article class="card fact" data-t="monde"><h3>Link's Awakening : pas de Zelda</h3><p>Il se passe sur l'île Koholint, sans princesse ni Triforce. Toute l'aventure est peut-être un rêve.</p></article>
-<article class="card fact" data-t="monde"><h3>Majora's Mask : 24 masques</h3><p>Le jeu propose 24 masques, dont plusieurs transforment Link, et 3 jours pour sauver Termina.</p></article>
-<article class="card fact" data-t="monde"><h3>Un monde englouti</h3><p>Dans The Wind Waker, Hyrule est noyée sous la mer, avec les héros oubliés de l'ancien royaume.</p></article>
-<article class="card fact" data-t="monde"><h3>Trois timelines</h3><p>Ocarina of Time est le point de séparation officiel de trois branches du temps. Les fans en débattent encore.</p></article>
-</div>
-</div></section>
-
-<section id="suivi"><div class="wrap">
-<h2>Ma progression : checklist de fin de jeu</h2>
-<p class="lead">Coche ce que tu as fait. Ta progression est enregistrée sur cet appareil.</p>
-<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progression"><i id="fill"></i></div>
-<p id="pct" style="font:700 1.4rem var(--serif);color:var(--or)">0 %</p>
-<div class="check" id="check"></div>
-<button class="reset" id="reset">Réinitialiser</button>
-</div></section>
-
-<section id="faq" class="faq"><div class="wrap">
-<h2>FAQ</h2>
-<p class="lead">Réponses courtes aux questions fréquentes.</p>
-<details><summary>Par quel Zelda commencer ?</summary><p>Tous sont indépendants. Pour un monde ouvert moderne, prends <em>Breath of the Wild</em>. Pour un Zelda plus classique, <em>A Link to the Past</em> ou <em>Ocarina of Time</em>.</p></details>
-<details><summary>Faut-il jouer dans l'ordre chronologique ?</summary><p>Non. Chaque jeu se comprend seul. Seules quelques suites directes (comme <em>Tears of the Kingdom</em>) gagnent à être jouées après leur prédécesseur.</p></details>
-<details><summary>Je suis bloqué dans un donjon, que faire ?</summary><p>Relis la méthode plus haut : fais le tour de la salle, repère ce que tu n'as pas utilisé, essaie ton nouvel objet partout et regarde en hauteur.</p></details>
-<details><summary>Combien de temps pour finir 100 % ?</summary><p>Comptez environ deux à trois fois la durée de l'histoire principale pour les jeux récents en monde ouvert.</p></details>
-</div></section>
+<div class="panel" id="home"><div class="wrap">
+<div class="hero"><h1>Hyrule Compagnon</h1><p>Deux jeux, deux guides complets. Choisis ta catégorie pour finir l'aventure sans te perdre.</p></div>
+<div class="choose">
+<button class="big mm" data-go="mm"><h2>Majora's Mask</h2><p>Trois jours, une lune qui tombe, 24 masques. Le Zelda le plus étrange de la saga.</p><span>Ouvrir le guide</span></button>
+<button class="big tp" data-go="tp"><h2>Twilight Princess</h2><p>Un Hyrule plongé dans le crépuscule, un héros loup et la mystérieuse Midna.</p><span>Ouvrir le guide</span></button>
+</div></div></div>
+<div class="panel" id="mm"></div>
+<div class="panel" id="tp"></div>
 </main>
-
 <footer><div class="wrap">Site de fans, non affilié à Nintendo. The Legend of Zelda est une marque de Nintendo.</div></footer>
 
 <script>
-(function(){
-// Filtres fun facts
-var btns=document.querySelectorAll('.filters button'),facts=document.querySelectorAll('.fact');
-btns.forEach(function(b){b.addEventListener('click',function(){
-btns.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');
-facts.forEach(function(c){c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.t!==b.dataset.f)});});});
-
-// Checklist
-var groups=[
-['Avant de commencer',['Explorer la première zone entièrement','Trouver l\'arme principale','Lire ou consulter la carte']],
-['Milieu de partie',['Finir le premier donjon','Trouver au moins 3 cœurs bonus','Obtenir la Master Sword ou l\'arme légendaire','Agrandir l\'inventaire ou les bourses']],
-['Avant le boss final',['Finir tous les donjons principaux','Préparer potions, fées et bombes','Refaire le plein de cœurs','Sauvegarder avant le combat']],
-['Après la fin (100 %)',['Compléter les quêtes annexes','Trouver tous les secrets et collectibles','Terminer le jeu en mode difficile']]];
-var K='zelda-progress',saved={};
-try{saved=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
-var root=document.getElementById('check'),n=0,total=0,i=0;
-groups.forEach(function(g){var h=document.createElement('h3');h.textContent=g[0];root.appendChild(h);
-g[1].forEach(function(t){var id='c'+(i++),l=document.createElement('label'),c=document.createElement('input');
-c.type='checkbox';c.id=id;c.checked=!!saved[id];c.addEventListener('change',function(){saved[id]=c.checked;save();upd()});
-l.appendChild(c);l.appendChild(document.createTextNode(t));root.appendChild(l);total++;});});
-function save(){try{localStorage.setItem(K,JSON.stringify(saved))}catch(e){}}
-function upd(){var c=root.querySelectorAll('input:checked').length,p=Math.round(c/total*100);
-document.getElementById('fill').style.width=p+'%';document.getElementById('pct').textContent=p+' %';
-document.querySelector('.bar').setAttribute('aria-valuenow',p);}
-document.getElementById('reset').addEventListener('click',function(){saved={};save();root.querySelectorAll('input').forEach(function(c){c.checked=false});upd();});
+var D={
+mm:{name:"Majora's Mask",
+intro:"Link arrive à Termina, un monde parallèle. Skull Kid, armé du masque de Majora, fait tomber la lune en trois jours. Tu remontes le temps à volonté pour tout arranger.",
+fiche:[["Sortie","2000, Nintendo 64"],["Remake","Majora's Mask 3D (3DS, 2015)"],["Durée","≈ 25 h histoire, 40 h et plus à 100 %"],["Réalisation","Eiji Aonuma, Yoshiaki Koizumi"]],
+steps:[["Clock Town, jour 1","Récupère l'Ocarina auprès du vendeur de masques, joue le Chant de la guérison et obtiens le Masque Mojo. Remonte ensuite le temps avec le Chant du temps."],["Prends le rythme","Apprends tôt le Chant du double temps (sauter d'une demi-journée) et le Chant du temps inversé (ralentir le temps)."],["Marais du Sud","Temple de la Forêt (Woodfall), boss Odolwa. Tu obtiens l'arc et libères le premier géant."],["Montagne des neiges","Deviens Goron, ouvre le Temple de Snowhead. Boss Goht, flèches de feu."],["Baie des Zoras","Deviens Zora, franchis le Temple de la Grande Baie. Boss Gyorg, flèches de glace."],["Canyon d'Ikana","Temple de la Tour de Pierre, à retourner à l'envers. Boss Twinmold."],["Apprends le Serment à l'ordre","Réveille les quatre géants pour les invoquer, puis monte sur la lune."],["Finale","Affronte Majora en trois formes. Avec les 20 masques normaux, l'enfant de la lune te donne le masque du Dieu féroce."]],
+dj:[["Woodfall","Odolwa","Arc des héros","Les fées perdues sont dans l'eau et dans les fleurs."],["Snowhead","Goht","Flèches de feu","Utilise la vitesse en boule de Goron."],["Great Bay","Gyorg","Flèches de glace","Change le sens du courant pour avancer."],["Stone Tower","Twinmold","Flèches de lumière","Retourne le temple avec l'interrupteur en forme d'œil."]],
+sec:[["Masques","24 au total : 4 de transformation (Mojo, Goron, Zora, Dieu féroce) et de nombreux masques utiles."],["Fées perdues","15 par temple, plus les grandes fées qui offrent capacités et améliorations."],["Quêtes des habitants","Le Carnet des Bombers et l'histoire d'Anju et Kafei donnent les récompenses les plus riches."],["Quarts de cœur","52 quarts de cœur et 4 réceptacles : ils permettent d'atteindre 20 cœurs."]],
+facts:[["saga","Développé en un an","Le jeu a été fait en environ un an, en réutilisant le moteur d'Ocarina of Time."],["jeu","Extension mémoire requise","Le jeu demandait l'Expansion Pak pour tourner sur Nintendo 64."],["monde","Termina n'est pas Hyrule","Link y arrive en cherchant un ami disparu. Il n'y a ni Zelda ni Triforce au premier plan."],["jeu","Une boucle de 3 jours","Le compte à rebours dure 72 heures de jeu, soit environ 54 minutes réelles par cycle."],["monde","Le Masque de Majora","Une entité maléfique liée au masque est la vraie menace, pas Skull Kid seul."],["saga","Un jeu à part","Ses thèmes, comme le deuil et l'angoisse, en font l'un des Zelda les plus sombres."]],
+check:[["Marais du Sud",["Finir le Temple de la Forêt","Masque Mojo et masque de cerf"]],["Autres régions",["Finir Snowhead","Finir la Grande Baie","Finir la Tour de Pierre"]],["Secrets",["Récupérer les 24 masques","Trouver toutes les fées perdues","Compléter le carnet des Bombers"]],["Finale",["Apprendre le Serment à l'ordre","Battre Majora"]]]},
+tp:{name:"Twilight Princess",
+intro:"Un crépuscule envahit Hyrule. Link se transforme en loup dans les zones d'ombre, guidé par Midna. Son but : dissiper le sortilège de Zant et de Ganondorf.",
+fiche:[["Sortie","2006, GameCube et Wii"],["Remake","Twilight Princess HD (Wii U, 2016)"],["Durée","≈ 35 h histoire, 60 h et plus à 100 %"],["Réalisation","Eiji Aonuma, Yoshiaki Koizumi"]],
+steps:[["Village d'Ordon","Fais les petites quêtes du village. Elles t'apprennent les bases avant que Link ne se transforme."],["Forêt de Firone","Récupère les Larmes de lumière contre l'ombre, puis le Temple de la Forêt. Boss Diababa, boomerang."],["Éldin","Mines des Gorons, boss Fyrus, bottes de fer. Puis on avance vers Kakariko."],["Lanelle","Temple du Lac, boss Morpheel, grappin. Passe par le domaine des Zoras."],["Le Bois Sacré","Retire la Master Sword : elle demande de vaincre les premiers temples."],["Terres du désert","Arbiter's Grounds, boss Stallord, toupie. Puis Pic enneigé, boss Blizzeta, boulet."],["Temple du Temps","Boss Armogohma, bâton de domination. Puis la Cité céleste, boss Argorok, double grappin."],["Finale","Palais du Crépuscule (Zant), puis château d'Hyrule et affrontement de Ganondorf."]],
+dj:[["Temple de la Forêt","Diababa","Boomerang de vent","Coupe les singes puis arrête les fleurs."],["Mines des Gorons","Fyrus","Bottes de fer","Aimants et bottes pour monter."],["Temple du Lac","Morpheel","Grappin","Contrôle le niveau d'eau."],["Arbiter's Grounds","Stallord","Toupie","Suis les rails de toupie."],["Ruines du Pic","Blizzeta","Boulet","Utilise la chaîne pour briser la glace."],["Temple du Temps","Armogohma","Bâton de domination","Fais avancer la statue avec le bâton."],["Cité céleste","Argorok","Double grappin","Monte étage par étage avec les grappins."]],
+sec:[["Insectes d'or","24 en tout : rapporte-les à Agitha contre des rubis et des bonus."],["Âmes de Poe","60 âmes à collecter, que Jovani échange contre des rubis et des récompenses."],["Quarts de cœur","45 en tout, jusqu'à 20 cœurs avec les réceptacles."],["Techniques cachées","7 techniques enseignées par le héros fantôme, comme le Coup fatal et la Grande spirale."],["Grotte des épreuves","50 étages à la fin du jeu pour récompense spéciale."]],
+facts:[["saga","D'abord GameCube","Le jeu était prévu sur GameCube avant d'être aussi adapté à la Wii."],["jeu","Version Wii en miroir","Sur Wii, le monde est inversé pour que Link soit droitier."],["monde","Midna","Le jeu gagne beaucoup de sa profondeur grâce à ce personnage plein de secrets."],["jeu","Link en loup","Le loup sent les trésors enfouis et communique avec les esprits."],["saga","Après Majora's Mask","Dans la chronologie officielle, il suit Ocarina et Majora dans la branche de l'enfant."],["monde","Les larmes de lumière","Chaque région t'oblige à chasser des insectes d'ombre pour rendre sa lumière à un esprit."]],
+check:[["Ordon et Firone",["Finir Ordon","Finir le Temple de la Forêt","Débloquer les larmes de lumière"]],["Milieu de partie",["Finir les Mines des Gorons","Finir le Temple du Lac","Prendre la Master Sword"]],["Fin d'aventure",["Finir la Cité céleste","Finir le Palais du Crépuscule","Battre Ganondorf"]],["100 %",["24 insectes d'or","60 âmes de Poe","45 quarts de cœur","7 techniques cachées"]]]}
+};
+var SUBS=[["pres","Présentation"],["guide","Guide pas à pas"],["dj","Donjons"],["sec","Secrets"],["facts","Fun facts"],["suivi","Ma progression"]];
+function h(t,c,x){return '<'+t+(c?' class="'+c+'"':'')+(x||'')+'>'}
+function render(k){
+var d=D[k],o='';
+o+=h('section','cathead')+'<div class="wrap"><h1>'+d.name+'</h1><p class="lead" style="margin-top:12px;margin-bottom:0">'+d.intro+'</p></div></section>';
+o+=h('section','s','id="'+k+'-pres"')+'<div class="wrap"><h2 class="t">Présentation</h2><div class="grid">'+d.fiche.map(function(f){return '<div class="card"><div class="k">'+f[0]+'</div><h3 style="color:var(--os)">'+f[1]+'</h3></div>'}).join('')+'</div></div></section>';
+o+=h('section','s','id="'+k+'-guide"')+'<div class="wrap"><h2 class="t">Guide pas à pas</h2><p class="lead">L\'ordre conseillé pour finir le jeu.</p><ol class="steps">'+d.steps.map(function(s){return '<li><b>'+s[0]+'</b>'+s[1]+'</li>'}).join('')+'</ol></div></section>';
+o+=h('section','s','id="'+k+'-dj"')+'<div class="wrap"><h2 class="t">Donjons</h2><p class="lead">Boss, objet obtenu et conseil.</p><div class="scroll"><table class="tbl"><tr><th>Donjon</th><th>Boss</th><th>Objet</th><th>Conseil</th></tr>'+d.dj.map(function(r){return '<tr><td>'+r.join('</td><td>')+'</td></tr>'}).join('')+'</table></div></div></section>';
+o+=h('section','s','id="'+k+'-sec"')+'<div class="wrap"><h2 class="t">Secrets et collectibles</h2><div class="grid">'+d.sec.map(function(s){return '<div class="card"><h3>'+s[0]+'</h3><p>'+s[1]+'</p></div>'}).join('')+'</div></div></section>';
+o+=h('section','s','id="'+k+'-facts"')+'<div class="wrap"><h2 class="t">Fun facts</h2><div class="filters" role="group" aria-label="Filtrer" data-k="'+k+'"><button aria-pressed="true" data-f="all">Tous</button><button aria-pressed="false" data-f="saga">La saga</button><button aria-pressed="false" data-f="jeu">Gameplay</button><button aria-pressed="false" data-f="monde">Monde et lore</button></div><div class="grid">'+d.facts.map(function(f){return '<div class="card fact" data-t="'+f[0]+'"><h3>'+f[1]+'</h3><p>'+f[2]+'</p></div>'}).join('')+'</div></div></section>';
+o+=h('section','s','id="'+k+'-suivi"')+'<div class="wrap"><h2 class="t">Ma progression</h2><p class="lead">Coche ce que tu as fait. C\'est enregistré sur cet appareil.</p><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div><div class="pct">0 %</div><div class="check">'+d.check.map(function(g,gi){return '<h3>'+g[0]+'</h3>'+g[1].map(function(t,ti){return '<label><input type="checkbox" data-id="'+gi+'-'+ti+'">'+t+'</label>'}).join('')}).join('')+'</div><button class="reset">Réinitialiser</button></div></section>';
+document.getElementById(k).innerHTML=o;
+var box=document.getElementById(k),store='zelda-'+k,saved={};
+try{saved=JSON.parse(localStorage.getItem(store)||'{}')}catch(e){}
+var ins=box.querySelectorAll('.check input');
+function upd(){var c=box.querySelectorAll('.check input:checked').length,p=Math.round(c/ins.length*100);box.querySelector('.bar i').style.width=p+'%';box.querySelector('.pct').textContent=p+' %';box.querySelector('.bar').setAttribute('aria-valuenow',p)}
+function save(){try{localStorage.setItem(store,JSON.stringify(saved))}catch(e){}}
+ins.forEach(function(i){i.checked=!!saved[i.dataset.id];i.addEventListener('change',function(){saved[i.dataset.id]=i.checked;save();upd()})});
+box.querySelector('.reset').addEventListener('click',function(){saved={};save();ins.forEach(function(i){i.checked=false});upd()});
 upd();
-
-// Lien actif dans la nav
-var links=document.querySelectorAll('nav a'),secs=document.querySelectorAll('section');
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});secs.forEach(function(s){io.observe(s)});}
-})();
+var fb=box.querySelectorAll('.filters button');
+fb.forEach(function(b){b.addEventListener('click',function(){fb.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');box.querySelectorAll('.fact').forEach(function(c){c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.t!==b.dataset.f)})})});
+}
+render('mm');render('tp');
+function go(k,skip){
+document.body.dataset.cat=k;
+document.querySelectorAll('.cat').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.go===k)});
+var s=document.getElementById('sub');
+s.innerHTML=k==='home'?'':SUBS.map(function(x){return '<button data-s="'+k+'-'+x[0]+'">'+x[1]+'</button>'}).join('');
+document.title=(k==='home'?'Hyrule Compagnon':D[k].name+' — Hyrule Compagnon');
+if(!skip){history.replaceState(null,'',k==='home'?'#':'#'+k)}
+window.scrollTo(0,0);
+}
+document.addEventListener('click',function(e){
+var g=e.target.closest('[data-go]');if(g){go(g.dataset.go);return}
+var s=e.target.closest('[data-s]');if(s){document.getElementById(s.dataset.s).scrollIntoView()}
+});
+var hh=location.hash.replace('#','');go(hh==='mm'||hh==='tp'?hh:'home',true);
 </script>
 </body>
 </html>
