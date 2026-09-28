@@ -88,6 +88,11 @@ body[data-cat=all]{--bg:#0c1a17;--card:#132a25;--line:#22463d;--acc:#e8c25a;--ac
 .gd ul{padding-left:20px}.gd h4{color:var(--acc2);font:700 .98rem var(--serif)}
 .tag{background:var(--line);border-radius:99px;padding:1px 11px;font:600 .8rem var(--sans)}
 .lnk{background:var(--acc);color:#140c00;border:0;border-radius:99px;padding:6px 16px;font:800 .9rem var(--sans);cursor:pointer;justify-self:start}
+.panel.on{display:block}
+body[data-cat=oot]{--bg:#0e1b12;--card:#16281a;--line:#2a4a30;--acc:#e6c14a;--acc2:#8fe07a}
+body[data-cat=tww]{--bg:#09192a;--card:#0f2740;--line:#1c4468;--acc:#f2c14e;--acc2:#5cd6ea}
+body[data-cat=botw]{--bg:#12171a;--card:#1b2429;--line:#2f3f47;--acc:#e6dcc0;--acc2:#6fd3ff}
+body[data-cat=totk]{--bg:#0c1a1a;--card:#132b2a;--line:#22504a;--acc:#f0b84a;--acc2:#7fe8c6}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
 </style>
 </head>
@@ -108,6 +113,7 @@ body[data-cat=all]{--bg:#0c1a17;--card:#132a25;--line:#22463d;--acc:#e8c25a;--ac
 <button class="big tp" data-go="tp"><h2>Twilight Princess</h2><p>Un Hyrule plongé dans le crépuscule, un héros loup et la mystérieuse Midna.</p><span>Ouvrir le guide</span></button>
 </div></div></div>
 <div class="panel" id="all"></div>
+<div class="panel" id="oot"></div><div class="panel" id="tww"></div><div class="panel" id="botw"></div><div class="panel" id="totk"></div>
 <div class="panel" id="mm"></div>
 <div class="panel" id="tp"></div>
 </main>
@@ -134,11 +140,48 @@ quest:[["Insectes d'or","À rapporter à Agitha : rubis, portefeuilles et bonus.
 facts:[["saga","D'abord GameCube","Le jeu était prévu sur GameCube avant d'être aussi adapté à la Wii."],["jeu","Version Wii en miroir","Sur Wii, le monde est inversé pour que Link soit droitier."],["monde","Midna","Le jeu gagne beaucoup de sa profondeur grâce à ce personnage plein de secrets."],["jeu","Link en loup","Le loup sent les trésors enfouis et communique avec les esprits."],["saga","Après Majora's Mask","Dans la chronologie officielle, il suit Ocarina et Majora dans la branche de l'enfant."],["monde","Les larmes de lumière","Chaque région t'oblige à chasser des insectes d'ombre pour rendre sa lumière à un esprit."]],
 check:[["Ordon et Firone",["Finir Ordon","Finir le Temple de la Forêt","Débloquer les larmes de lumière"]],["Milieu de partie",["Finir les Mines des Gorons","Finir le Temple du Lac","Prendre la Master Sword"]],["Fin d'aventure",["Finir la Cité céleste","Finir le Palais du Crépuscule","Battre Ganondorf"]],["100 %",["24 insectes d'or","60 âmes de Poe","45 quarts de cœur","7 techniques cachées"]]]}
 };
+
+D.oot={name:"Ocarina of Time",
+intro:"Le premier Zelda en 3D. Link réunit les trois pierres spirituelles, ouvre le Temple du Temps et voyage sept ans plus tard pour vaincre Ganondorf.",
+fiche:[["Sortie","1998, Nintendo 64"],["Remake","Ocarina of Time 3D (3DS, 2011)"],["Durée","≈ 25 h histoire, 40 h et plus à 100 %"],["Production","Shigeru Miyamoto"]],
+steps:[["Forêt Kokiri","Prends l'épée Kokiri et le bouclier Deku, puis entre dans l'Arbre Mojo. Vainc Gohma pour obtenir l'Émeraude Kokiri."],["Château d'Hyrule","Rencontre Zelda, apprends le Chant de Zelda et récupère l'Ocarina des Temps."],["Caverne Dodongo","Sur le mont de la Mort, aide les Gorons. Vainc le roi Dodongo pour obtenir le Rubis Goron."],["Ventre de Jabu-Jabu","Au domaine Zora, avale la baleine, vainc Barinade et récupère le Saphir Zora."],["Temple du Temps","Avec les trois pierres, ouvre la porte, retire la Master Sword et deviens adulte."],["Temples de la Forêt, du Feu et de l'Eau","Réveille les trois premiers sages. Chaque temple donne un objet clé pour la suite."],["Temples de l'Ombre et de l'Esprit","Termine les deux derniers temples, puis rejoins Zelda."],["Château de Ganon","Traverse les six barrières, puis affronte Ganondorf et sa forme finale Ganon."]],
+dj:[["Arbre Mojo","Gohma","Lance-pierre","Vise l'œil de l'araignée quand elle descend."],["Caverne Dodongo","Roi Dodongo","Sac de bombes","Fais exploser les bombes quand il ouvre la bouche."],["Jabu-Jabu","Barinade","Boomerang","Utilise le boomerang pour les tentacules."],["Temple de la Forêt","Phantom Ganon","Arc des fées","Renvoie ses boules d'énergie."],["Temple du Feu","Volvagia","Marteau mégaton","Frappe-la quand elle sort du trou."],["Temple de l'Eau","Morpha","Longshot","Descends le niveau de l'eau par étage."],["Temple de l'Ombre","Bongo Bongo","Bottes de plomb ou de hover","Utilise la Lentille de vérité."],["Temple de l'Esprit","Twinrova","Gantelets d'argent","Renvoie les sorts des deux sorcières."]],
+sec:[["Skulltulas d'or","100 à trouver de jour ou de nuit. Chaque palier débloque une récompense."],["Quarts de cœur","36 à trouver pour monter jusqu'à 20 cœurs."],["Grandes fées","Elles offrent magie, double magie et défense."],["Couteau du géant","Obtenu à la fin d'une longue chaîne d'échanges d'objets."]],
+quest:[["Chaîne d'échanges","Une longue suite d'objets échangés qui se termine par le Couteau du géant."],["Épona","Apprends le Chant d'Épona auprès de Malon pour gagner ton cheval."],["Marchand de masques","Emprunte puis vends des masques pour gagner des rubis et des récompenses."],["Skulltulas d'or","Chaque palier de 10 donne une récompense, jusqu'à 100."]],
+facts:[["jeu","Le ciblage est né ici","Le verrouillage sur un ennemi est devenu un standard des jeux d'action 3D."],["saga","Une référence","Il est régulièrement cité comme l'un des meilleurs jeux de tous les temps."],["monde","Navi","La fée qui guide Link explique le jeu et l'aide à se repérer."],["monde","La séparation des chronologies","La fin du jeu est le point de départ de trois branches dans la chronologie officielle."]],
+check:[["Enfance",["Arbre Mojo","Caverne Dodongo","Jabu-Jabu","Ouvrir le Temple du Temps"]],["Adulte",["Temple de la Forêt","Temple du Feu","Temple de l'Eau","Temple de l'Ombre","Temple de l'Esprit"]],["Finale",["Château de Ganon","Vaincre Ganondorf"]],["100 %",["100 Skulltulas d'or","36 quarts de cœur","Couteau du géant"]]]};
+D.tww={name:"The Wind Waker",
+intro:"Hyrule est engloutie. Link navigue sur la Grande Mer à bord du Lion Rouge pour sauver sa sœur et vaincre Ganondorf.",
+fiche:[["Sortie","2002, GameCube"],["Remake","The Wind Waker HD (Wii U, 2013)"],["Durée","≈ 30 h histoire, 50 h et plus à 100 %"],["Réalisation","Eiji Aonuma"]],
+steps:[["Outset Island","Récupère l'épée et le bouclier, puis embarque à bord du Lion Rouge."],["Dragon Roost","Explore l'île des Ritos, vainc Gohma dans la caverne et obtiens la perle de Din."],["Forêt du Refuge","Traverse la Forêt interdite, vainc Kalle Demos et récupère la perle de Farore."],["Tour des Dieux","Réunis les trois perles, monte la tour et vainc Gohdan."],["Château d'Hyrule englouti","Récupère la Master Sword, puis plonge au fond de la mer."],["Temples de la Terre et du Vent","Réveille les deux sages, Medli et Makar."],["Fragments de la Triforce","Rassemble les huit fragments avec les cartes au trésor."],["Tour de Ganon","Affronte Ganondorf dans la tour, puis la bataille finale."]],
+dj:[["Dragon Roost","Gohma","Crochet","Utilise-le pour te balancer sur les points d'accroche."],["Forêt interdite","Kalle Demos","Boomerang","Arrête les plantes avec le boomerang."],["Tour des Dieux","Gohdan","Arc des héros","Actionne les statues pour avancer."],["Temple de la Terre","Jalhalla","Miroir de lumière","Utilise la lumière pour révéler les passages."],["Temple du Vent","Molgera","Bottes de fer","Descends dans les airs avec l'aide des courants."]],
+sec:[["Cartes au trésor","Huit cartes de la Triforce donnent chacune un fragment."],["Carte de la Grande Mer","49 secteurs à explorer pour la compléter."],["Quarts de cœur","44 en tout, cachés sur les îles et en mer."],["Galerie Nintendo","Prends des photos de personnages pour les faire fabriquer en figurines."]],
+quest:[["Cartes et fragments","Fais déchiffrer les cartes par Tingle, puis pêche les fragments de la Triforce."],["Galerie Nintendo","Ramène des photos à Carlov pour obtenir des figurines."],["Îles cachées","Explore les petites îles pour trouver marchands, mini-jeux et récompenses."]],
+facts:[["saga","Cel-shading","Son style de dessin animé a d'abord divisé, avant d'être largement salué."],["monde","Un Hyrule noyé","Le royaume englouti est un vestige d'un autre âge."],["jeu","Voile rapide dans la HD","La version Wii U ajoute une voile rapide pour gagner du temps en mer."],["monde","Le Lion Rouge","Le bateau parle : c'est un roi d'Hyrule sous forme de bateau."]],
+check:[["Début",["Outset Island","Dragon Roost","Forêt interdite"]],["Milieu",["Tour des Dieux","Master Sword","Temple de la Terre","Temple du Vent"]],["Fin",["8 fragments de la Triforce","Tour de Ganon","Vaincre Ganondorf"]],["100 %",["44 quarts de cœur","Carte de la mer complète","Galerie Nintendo"]]]};
+D.botw={name:"Breath of the Wild",
+intro:"Link se réveille après cent ans, dans un royaume ravagé par Ganon. Le monde s'explore librement : les Créatures divines affaiblissent Ganon avant l'assaut final.",
+fiche:[["Sortie","2017, Wii U et Switch"],["Durée","≈ 50 h histoire, 100 h et plus à 100 %"],["Réalisation","Hidemaro Fujibayashi"],["Production","Eiji Aonuma"]],
+steps:[["Plateau des Prémices","Termine les quatre sanctuaires, récupère le paravoile et rejoins le Vieil homme."],["Kakariko","Parle à Impa et découvre les quatre Créatures divines."],["Domaine Zora","Vah Ruta : Mipha te guide."],["Mont Goron","Vah Rudania : Daruk t'aide."],["Village Piaf","Vah Medoh : Revali apporte son aide."],["Désert Gerudo","Vah Naboris : Urbosa te donne son soutien."],["L'Épée de Légende","Trouve la Master Sword au fond de la forêt Korogu : elle demande 13 cœurs."],["Château d'Hyrule","Affronte Ganon, puis sa forme finale dans le château."]],
+dj:[["Vah Ruta","Ganon d'eau","Pouvoir de Mipha","Utilise les bornes pour orienter la trompe."],["Vah Rudania","Ganon de feu","Protection de Daruk","Contrôle la rotation de la bête."],["Vah Medoh","Ganon du vent","Bourrasque de Revali","Vise les bornes avec l'arc."],["Vah Naboris","Ganon de foudre","Furie d'Urbosa","Évite les décharges d'électricité."]],
+sec:[["Sanctuaires","120 à trouver, chacun donne un orbe."],["Korogus","900 graines à collecter contre une amélioration d'inventaire."],["Souvenirs","13 souvenirs à retrouver pour découvrir l'histoire cachée."],["Grandes fées","Améliore l'armure aux fontaines des Grandes fées."]],
+quest:[["Épreuves des sanctuaires","Des défis de combat, de logique et de physique."],["Cuisine","Cuisine des repas : la meilleure façon de te soigner."],["DLC","Deux extensions : Épreuves de l'épée et Ballade des Prodiges."],["Chants de Kass","Le musicien te donne des indices pour trouver les sanctuaires cachés."]],
+facts:[["jeu","Ganon dès le début","Tu peux affronter Ganon dès la fin du plateau d'introduction."],["monde","Cent ans","Link a dormi cent ans avant de se réveiller."],["saga","Monde ouvert","Il a réinventé la saga avec un monde libre d'accès."],["jeu","Physique","Feu, vent et électricité réagissent de façon crédible."]],
+check:[["Début",["Plateau des Prémices","Paravoile","Kakariko"]],["Créatures divines",["Vah Ruta","Vah Rudania","Vah Medoh","Vah Naboris"]],["Fin",["Master Sword","Château d'Hyrule","Vaincre Ganon"]],["100 %",["120 sanctuaires","900 Korogus","13 souvenirs"]]]};
+D.totk={name:"Tears of the Kingdom",
+intro:"Le ciel, la surface et les profondeurs d'Hyrule. Link fabrique, remonte le temps et affronte le Roi Démon Ganondorf.",
+fiche:[["Sortie","12 mai 2023, Switch"],["Durée","≈ 60 h histoire, 150 h et plus à 100 %"],["Réalisation","Hidemaro Fujibayashi"],["Production","Eiji Aonuma"]],
+steps:[["Îles célestes","Termine les quatre sanctuaires pour apprendre les pouvoirs : Emprise, Amalgame, Rétro-Temps, Ascension."],["Retour sur terre","Explore Hyrule et aide les habitants des régions."],["Temple du Vent","Aide les Piafs pour vaincre Colgera."],["Temple du Feu","Aide les Gorons pour vaincre Gohma."],["Temple de l'Eau","Aide les Zoras pour vaincre Mucktorpedo."],["Temple de la Foudre","Aide les Gerudo pour vaincre la reine Gibdo."],["Temple de l'Esprit","Retrouve Mineru et affronte Phantom Ganon."],["Château d'Hyrule","Descends jusqu'à Ganondorf pour le combat final."]],
+dj:[["Temple du Vent","Colgera","Vœu de Tulin","Utilise le vent pour te déplacer."],["Temple du Feu","Gohma","Vœu de Yunobo","Contrôle le passage de la lave."],["Temple de l'Eau","Mucktorpedo","Vœu de Sidon","Contrôle le courant."],["Temple de la Foudre","Reine Gibdo","Vœu de Riju","Utilise la foudre pour ouvrir les passages."],["Temple de l'Esprit","Phantom Ganon","Vœu de Mineru","Construis un pont ou un chariot pour avancer."]],
+sec:[["Sanctuaires","152 à trouver dans le ciel, sur terre et sous terre."],["Korogus","1 000 graines à collecter."],["Racines lumineuses","120 dans les profondeurs pour éclairer la carte."],["Puits et cavernes","Souterrains à explorer pour des trésors cachés."]],
+quest:[["Constructions Zonai","Construis véhicules et machines pour explorer plus vite."],["Grandes fées","Améliore l'armure aux fontaines."],["Puits et cavernes","Chaque zone cache des coffres et des épreuves."]],
+facts:[["saga","Suite de Breath of the Wild","Il reprend la carte du jeu précédent en y ajoutant le ciel et les profondeurs."],["jeu","Amalgame","Colle deux objets pour créer des armes ou des projectiles."],["monde","Roi Démon","Ganondorf revient sous sa forme de Roi Démon."],["jeu","Verticalité","La carte se joue en trois couches."]],
+check:[["Ciel",["Îles célestes","Les quatre pouvoirs"]],["Temples",["Vent","Feu","Eau","Foudre","Esprit"]],["Fin",["Château d'Hyrule","Vaincre Ganondorf"]],["100 %",["152 sanctuaires","1 000 Korogus","120 Racines lumineuses"]]]};
 var SUBS=[["pres","Présentation"],["guide","Guide pas à pas"],["dj","Donjons"],["sec","Secrets"],["quest","Quêtes secondaires"],["facts","Fun facts"],["suivi","Ma progression"]];
 function h(t,c,x){return '<'+t+(c?' class="'+c+'"':'')+(x||'')+'>'}
 function render(k){
 var d=D[k],o='';
-o+=h('section','cathead')+'<div class="wrap"><h1>'+d.name+'</h1><p class="lead" style="margin-top:12px;margin-bottom:0">'+d.intro+'</p></div></section>';
+o+=h('section','cathead')+'<div class="wrap"><button class="lnk" data-go="all" style="margin-bottom:14px">← Toute la saga</button><h1>'+d.name+'</h1><p class="lead" style="margin-top:12px;margin-bottom:0">'+d.intro+'</p></div></section>';
 o+=h('section','s','id="'+k+'-pres"')+'<div class="wrap"><h2 class="t">Présentation</h2><div class="grid">'+d.fiche.map(function(f){return '<div class="card"><div class="k">'+f[0]+'</div><h3 style="color:var(--os)">'+f[1]+'</h3></div>'}).join('')+'</div></div></section>';
 o+=h('section','s','id="'+k+'-guide"')+'<div class="wrap"><h2 class="t">Guide pas à pas</h2><p class="lead">L\'ordre conseillé pour finir le jeu.</p><ol class="steps">'+d.steps.map(function(s){return '<li><b>'+s[0]+'</b>'+s[1]+'</li>'}).join('')+'</ol></div></section>';
 o+=h('section','s','id="'+k+'-dj"')+'<div class="wrap"><h2 class="t">Donjons</h2><p class="lead">Boss, objet obtenu et conseil.</p><div class="scroll"><table class="tbl"><tr><th>Donjon</th><th>Boss</th><th>Objet</th><th>Conseil</th></tr>'+d.dj.map(function(r){return '<tr><td>'+r.join('</td><td>')+'</td></tr>'}).join('')+'</table></div></div></section>';
@@ -158,18 +201,18 @@ upd();
 var fb=box.querySelectorAll('.filters button');
 fb.forEach(function(b){b.addEventListener('click',function(){fb.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');box.querySelectorAll('.fact').forEach(function(c){c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.t!==b.dataset.f)})})});
 }
-render('mm');render('tp');
+render('mm');render('tp');render('oot');render('tww');render('botw');render('totk');
 var B={a:"Avant la scission",e:"Link enfant",d:"Link adulte",f:"Défaite du héros",p:"Après la chronologie",x:"Hors chronologie"};
 var G=[
 ["The Legend of Zelda",1986,"NES / Famicom Disk","f",16,"Le premier voyage de Link : un monde ouvert, aucune carte, neuf donjons.","Prends l'épée dans la première grotte|Brûle les buissons et bombarde les murs suspects","Deuxième quête après la fin (ou fichier nommé ZELDA)|Cœurs cachés et jeu d'argent","Il n'y a pas de sauvegarde standard sur toutes les versions : la pile interne conserve ta partie."],
 ["The Adventure of Link",1987,"NES / Famicom Disk","f",17,"Suite en défilement latéral avec expérience, magie et villes.","Cherche les mages pour apprendre les sorts|Monte tes niveaux d'attaque, de magie et de vie","Recherche des vies supplémentaires et des réceptacles|Dialogue avec les habitants des villes pour les indices","Un des rares Zelda avec un système d'expérience."],
 ["A Link to the Past",1991,"Super Nintendo","f",11,"Deux mondes parallèles, donjons à objets et Master Sword.","Utilise le miroir pour passer d'un monde à l'autre|Explore le monde des ténèbres avant chaque donjon","24 quarts de cœur et les bouteilles|Fontaines des fées et forgeron pour améliorer l'épée","Modèle de la structure de la saga."],
 ["Link's Awakening",1993,"Game Boy · DX 1998 · Switch 2019","f",13,"Sur l'île Koholint, sans Zelda ni Triforce. L'aventure est peut-être un rêve.","Réveille le Poisson-Rêve dans huit donjons|Les instruments de musique sont la clé","Coquillages secrets (50)|Chaîne d'échanges qui mène à la loupe","Premier Zelda portable."],
-["Ocarina of Time",1998,"Nintendo 64 · 3DS 2011","a",4,"Le premier Zelda en 3D : Link voyage entre enfance et âge adulte.","Apprends toutes les mélodies|Retourne dans les zones avec l'autre âge du héros","100 Skulltulas d'or|Chaîne d'échanges vers le Couteau du géant","Introduit le ciblage (Z)."],
+["Ocarina of Time",1998,"Nintendo 64 · 3DS 2011","a",4,"Le premier Zelda en 3D : Link voyage entre enfance et âge adulte.","Apprends toutes les mélodies|Retourne dans les zones avec l'autre âge du héros","100 Skulltulas d'or|Chaîne d'échanges vers le Couteau du géant","Introduit le ciblage (Z).","oot"],
 ["Majora's Mask",2000,"Nintendo 64 · 3DS 2015","e",5,"Trois jours pour sauver Termina de la lune.","Voyage dans le temps pour tout finir|Ralentis le temps avec le Chant inversé","Anju et Kafei|Ranch Romani et Carnet des Bombers","Voir le guide complet.","mm"],
 ["Oracle of Seasons / Ages",2001,"Game Boy Color","f",12,"Deux jeux liés : saisons à changer et voyage dans le temps.","Finis-en un, note le mot de passe, joue l'autre|Adapte l'objet à la saison ou à l'époque","64 anneaux à collectionner|Secrets et mots de passe entre les deux jeux","Les deux jeux se combinent pour la vraie fin."],
 ["Four Swords",2002,"Game Boy Advance","a",3,"Coopération à plusieurs joueurs avec l'épée qui se multiplie.","Coopère pour lancer les mécanismes|Récupère toutes les gemmes","Récolte des gemmes à chaque niveau|Défis de fin de niveau","Premier Zelda pensé pour le multijoueur."],
-["The Wind Waker",2002,"GameCube · HD 2013 Wii U","d",8,"Un Hyrule noyé par la mer, à explorer à la voile.","Gagne vite la voile rapide|Utilise la baguette du vent pour te repérer","Cartes au trésor et Triforce|Galerie Nintendo et cartes de la mer","Cel-shading, style très aimé aujourd'hui."],
+["The Wind Waker",2002,"GameCube · HD 2013 Wii U","d",8,"Un Hyrule noyé par la mer, à explorer à la voile.","Gagne vite la voile rapide|Utilise la baguette du vent pour te repérer","Cartes au trésor et Triforce|Galerie Nintendo et cartes de la mer","Cel-shading, style très aimé aujourd'hui.","tww"],
 ["Four Swords Adventures",2004,"GameCube","e",7,"Retour de la coopération, cette fois sur console de salon.","Joue à plusieurs pour les énigmes|Récupère les gemmes","Niveaux bonus|Collecte de gemmes","Utilise un lien avec la Game Boy Advance."],
 ["The Minish Cap",2004,"Game Boy Advance","a",2,"Link rétrécit avec une casquette qui parle.","Rétrécis aux endroits marqués|Fusionne les Kinstones avec les PNJ","Kinstones à fusionner|136 figurines à collectionner","La casquette Ezlo aide le héros."],
 ["Twilight Princess",2006,"GameCube / Wii · HD 2016 Wii U","e",6,"Un crépuscule sur Hyrule et un Link loup guidé par Midna.","Récupère les Larmes de lumière|Utilise le flair du loup","Insectes d'or, âmes de Poe|Mini-jeux et grotte des épreuves","Voir le guide complet.","tp"],
@@ -178,8 +221,8 @@ var G=[
 ["Skyward Sword",2011,"Wii · HD 2021 Switch","a",1,"L'origine de la saga et de la Master Sword.","Frappe dans la direction de la garde|Améliore ton équipement","80 cristaux de gratitude|Cubes de la déesse et coffres célestes","Le tout premier Link de la chronologie."],
 ["A Link Between Worlds",2013,"Nintendo 3DS","f",14,"Suite spirituelle de A Link to the Past, avec fusion murale.","Loue puis achète les objets chez Ravio|Fusionne avec les murs","100 Maiamai pour améliorer les objets|Quarts de cœur","Objets accessibles dans l'ordre de ton choix."],
 ["Tri Force Heroes",2015,"Nintendo 3DS","f",15,"Trois Links coopèrent pour surmonter les épreuves.","Combine les capacités des Links|Choisis bien ta tenue","Collecte des matériaux pour les tenues|Défis du mode difficile","Les tenues donnent des pouvoirs."],
-["Breath of the Wild",2017,"Wii U / Switch","p",18,"Cent ans après la Calamité, un monde ouvert où l'on choisit son chemin.","Prends la Master Sword|Obtiens des cœurs et de l'endurance dans les sanctuaires","120 sanctuaires et 900 Korogus|Souvenirs et cuisine","Tu peux affronter Ganon très tôt."],
-["Tears of the Kingdom",2023,"Switch","p",19,"Suite de Breath of the Wild, avec ciel, surface et profondeurs.","Finis d'abord les îles célestes|Éclaire les profondeurs avec les Racines","152 sanctuaires, 1000 Korogus|Véhicules et constructions","On peut créer des véhicules avec l'Amalgame."],
+["Breath of the Wild",2017,"Wii U / Switch","p",18,"Cent ans après la Calamité, un monde ouvert où l'on choisit son chemin.","Prends la Master Sword|Obtiens des cœurs et de l'endurance dans les sanctuaires","120 sanctuaires et 900 Korogus|Souvenirs et cuisine","Tu peux affronter Ganon très tôt.","botw"],
+["Tears of the Kingdom",2023,"Switch","p",19,"Suite de Breath of the Wild, avec ciel, surface et profondeurs.","Finis d'abord les îles célestes|Éclaire les profondeurs avec les Racines","152 sanctuaires, 1000 Korogus|Véhicules et constructions","On peut créer des véhicules avec l'Amalgame.","totk"],
 ["Echoes of Wisdom",2024,"Switch","x",20,"Zelda est jouable et copie des échos pour avancer.","Essaie plusieurs échos par obstacle|Explore les failles","Quêtes des habitants|Collecte d'échos","Première fois que Zelda est l'héroïne."]];
 function gid(n){return 'g-'+n.replace(/[^a-z0-9]/gi,'').toLowerCase()}
 function renderAll(){
@@ -201,7 +244,7 @@ renderAll();
 
 function go(k,skip){
 document.body.dataset.cat=k;
-document.querySelectorAll('.cat').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.go===k)});
+document.querySelectorAll('.cat').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.go===k||(b.dataset.go==='all'&&D[k]&&k!=='mm'&&k!=='tp'))});document.querySelectorAll('.panel').forEach(function(x){x.classList.toggle('on',x.id===k)});
 var s=document.getElementById('sub');
 s.innerHTML=k==='home'?'':(k==='all'?[['chrono','Chronologie'],['jeux','Tous les jeux']]:SUBS).map(function(x){return '<button data-s="'+k+'-'+x[0]+'">'+x[1]+'</button>'}).join('');
 document.title=(k==='home'?'Hyrule Compagnon':k==='all'?'Toute la saga':D[k].name+' — Hyrule Compagnon');
@@ -212,7 +255,7 @@ document.addEventListener('click',function(e){
 var g=e.target.closest('[data-go]');if(g){go(g.dataset.go);return}
 var s=e.target.closest('[data-s]');if(s){document.getElementById(s.dataset.s).scrollIntoView()}
 });
-var hh=location.hash.replace('#','');go(hh==='mm'||hh==='tp'||hh==='all'?hh:'home',true);
+var hh=location.hash.replace('#','');go(hh==='all'||D[hh]?hh:'home',true);
 </script>
 </body>
 </html>
